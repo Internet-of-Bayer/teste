@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <script>
+      function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+      }
+
+      var token = getParameterByName("token");
+      // Use o token aqui, por exemplo:
+      console.log("Token recebido: " + token);
+    </script>
+  </head>
+  <body>
+    Token recebido com sucesso!
+  </body>
+</html>
