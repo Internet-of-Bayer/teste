@@ -9,11 +9,15 @@
       }
 
       var token = getParameterByName("token");
-      // Use o token aqui, por exemplo:
-      console.log("Token recebido: " + token);
+      var tokenValido = "SEU_TOKEN_VALIDO_AQUI";
+
+      if (token !== tokenValido) {
+        // O token não é válido, redireciona para a página de erro
+        window.location.href = "http://example.com/erro.html";
+      }
     </script>
   </head>
   <body>
-    Token recebido com sucesso!
+    Token válido, continuando a carregar a página...
   </body>
 </html>
